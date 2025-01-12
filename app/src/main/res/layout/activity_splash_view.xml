@@ -10,27 +10,29 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="290dp"
-        android:layout_height="240dp"
+        android:layout_width="250dp"
+        android:layout_height="220dp"
         android:layout_marginTop="88dp"
         app:layout_constraintBottom_toTopOf="@+id/invent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
         app:srcCompat="@drawable/logoo" />
+
 
     <TextView
         android:id="@+id/invent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="FSS Inventory System"
-        android:textSize="40dp"
+        android:layout_marginBottom="172dp"
+        android:text="LAICA NICOLE\nSCHOOL SUPPLY\nAPP INVENTORY\nSALES\nMANAGEMENT"
+        android:textAlignment="center"
         android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">POSandInventorySystem</string>
+    <string name="app_name">POS and Inventory System</string>
+
+    <string-array name="earnings_periods">
+        <item><font face="sans-serif-bold" size="18">Daily</font></item>
+        <item><font face="sans-serif-bold" size="18">Weekly</font></item>
+        <item><font face="sans-serif-bold" size="18">Monthly</font></item>
+        <item><font face="sans-serif-bold" size="18">Yearly</font></item>
+    </string-array>
+
+
 </resources>

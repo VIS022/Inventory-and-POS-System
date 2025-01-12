@@ -13,128 +13,88 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="CATEGORY LISTS"
-        android:textColor="@color/black"
+        android:letterSpacing="0.2"
+        android:textColor="@color/headcolor"
+        android:background="@drawable/textview_background"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/prod"
+
+    <LinearLayout
+        android:id="@+id/LLCL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="104dp"
-        android:text="Add Category: "
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/EditCateName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="92dp"
-        android:hint="name"
-        app:layout_constraintStart_toEndOf="@id/prod"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/myCircularButton"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/button_circle"
-        android:backgroundTint="#00ff00"
-        android:layout_marginEnd="20dp"
-        android:text="Add"
+        android:background="@drawable/cart_item_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/categoryListView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="@+id/EditCateName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCategoryList"
+        app:layout_constraintVertical_bias="0.789">
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="411dp"
-        android:layout_height="569dp"
+        <TextView
+            android:id="@+id/prod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Add Category: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/EditCateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:hint="name"
+            app:layout_constraintStart_toEndOf="@id/prod"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/myCircularButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_circle"
+            android:backgroundTint="#00ff00"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LLCL"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/categoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="585dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/childView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/barrier"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#F5F7F8"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/cat1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="104dp"
-                    android:text="Utensils"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/myCircularEdit"
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/button_circle"
-                    android:backgroundTint="#00ff00"
-                    android:text="Edit"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.711"
-                    app:layout_constraintStart_toStartOf="@+id/cat1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/myCircularDel"
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:background="@drawable/button_circle"
-                    android:backgroundTint="@color/red"
-                    android:text="Delete"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.938"
-                    app:layout_constraintStart_toStartOf="@+id/myCircularEdit"
-                    app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="1.0">
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+    </ListView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

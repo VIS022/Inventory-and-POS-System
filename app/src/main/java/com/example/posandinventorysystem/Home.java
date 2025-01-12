@@ -19,14 +19,14 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         Button btnViewInventory = findViewById(R.id.viewinventory);
         Button btnPos = findViewById(R.id.pos);
         Button btnEarnings = findViewById(R.id.earning);
-        Button btnExit = findViewById(R.id.exit);
+        Button btnReceipt = findViewById(R.id.receipt);
 
         btnAddProduct.setOnClickListener(this);
         btnAddCategory.setOnClickListener(this);
         btnViewInventory.setOnClickListener(this);
         btnPos.setOnClickListener(this);
         btnEarnings.setOnClickListener(this);
-        btnExit.setOnClickListener(this);
+        btnReceipt.setOnClickListener(this);
     }
 
     @Override
@@ -42,9 +42,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             intent = new Intent(this, POS.class);
         } else if (v.getId() == R.id.earning) {
             intent = new Intent(this, Earnings.class);
-        } else if (v.getId() == R.id.exit) {
-            finish(); // Close the current activity
-            return; // Exit the method
+        } else if (v.getId() == R.id.receipt) {
+            intent = new Intent(this, Receipt.class);
         }
 
         if (intent != null) {

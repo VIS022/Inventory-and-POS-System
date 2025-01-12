@@ -27,7 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="ADD PRODUCT"
-        android:textColor="@color/black"
+        android:textColor="@color/headcolor"
+        android:background="@drawable/textview_background"
+        android:letterSpacing="0.2"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,22 +38,26 @@
 
 
     <ImageView
+        android:id="@+id/insertImgProd"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
-        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAddP"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.026"
+        android:src="@drawable/image_add"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/barrier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/borderr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,13 +68,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:text="Product: "
             android:drawableLeft="@drawable/icons8_prod_48"
-            android:text="Product:"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,12 +85,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint="name"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
-            app:layout_constraintStart_toStartOf="@+id/prod"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/prod"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.533" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -93,9 +101,10 @@
         android:id="@+id/palatada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="275dp"
         android:background="@drawable/borderr"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -106,7 +115,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:drawableLeft="@drawable/icons8_category_48"
-            android:text="Category: "
+            android:text="Category:"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -117,16 +128,21 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Spinner
-            android:id="@+id/TxtSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Name"
+            android:id="@+id/addtxtSpinner"
+            android:layout_width="180dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="7.5dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:dropDownWidth="match_parent"
+            android:popupAnimationStyle="@style/spinnerDropDownItemStyle"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.006"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/txtCate"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -136,9 +152,10 @@
         android:id="@+id/buhangin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="345dp"
         android:background="@drawable/borderr"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -153,6 +170,8 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -163,22 +182,23 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint="price"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/txtPrice"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
+            app:layout_constraintVertical_bias="0.533" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/semento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="415dp"
         android:background="@drawable/borderr"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -193,6 +213,8 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -203,12 +225,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint="quantity"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/txtQuantity"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.533" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -216,9 +239,10 @@
         android:id="@+id/pala"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="485dp"
         android:background="@drawable/borderr"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,6 +258,9 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -244,6 +271,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint="barcode"
+            android:layout_marginBottom="5dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -257,9 +286,10 @@
         android:id="@+id/graba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="555dp"
         android:background="@drawable/borderr"
-
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -274,6 +304,9 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -284,6 +317,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:hint="capital"
+            android:layout_marginBottom="5dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -293,38 +328,22 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/btnImage"
-        android:layout_width="130dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="72dp"
-        android:background="@drawable/buttonround"
-        android:drawableLeft="@drawable/baseline_add_photo_alternate_24"
-        android:text="Insert Image"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/graba"
-        app:layout_constraintVertical_bias="0.833" />
 
     <Button
-        android:id="@+id/btnSave"
-        android:layout_width="130dp"
+        android:id="@+id/btnAddSave"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/home_btn_border"
+        android:drawableLeft="@drawable/outline_add_24"
+        android:paddingLeft="6dp"
         android:text="Add Item"
-
-        android:background="@drawable/buttonround"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/outline_add_24"
-        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnImage" />
+        app:layout_constraintTop_toBottomOf="@+id/graba" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

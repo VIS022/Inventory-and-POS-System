@@ -12,117 +12,131 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HOME"
-        android:textColor="@color/black"
+        android:letterSpacing="0.4"
+        android:textColor="@color/headcolor"
+        android:background="@drawable/textview_background"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="50dp"
+        app:constraint_referenced_ids="product,category,viewinventory,pos,earning,receipt"
+        app:flow_horizontalGap="10dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHome" />
 
     <Button
         android:id="@+id/product"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="140dp"
-        android:backgroundTint="#F5F7F8"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
         android:drawableTop="@drawable/img"
         android:text="ADD PRODUCT"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/pos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/category"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/flow" />
 
     <Button
         android:id="@+id/category"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="140dp"
-        android:backgroundTint="#F5F7F8"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
         android:drawableTop="@drawable/img_1"
         android:text="ADD CATEGORY"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/earning"
-        app:layout_constraintStart_toEndOf="@id/product"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewinventory"
+        app:layout_constraintStart_toStartOf="@+id/flow"
+        app:layout_constraintTop_toTopOf="@+id/flow" />
 
     <Button
         android:id="@+id/viewinventory"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#F5F7F8"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
         android:drawableTop="@drawable/img_2"
         android:text="VIEW INVENTORY"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/exit"
+        android:paddingTop="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toEndOf="@id/category"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flow" />
 
     <Button
         android:id="@+id/pos"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#F5F7F8"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
         android:drawableTop="@drawable/img_3"
         android:text="POS"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="16sp"
         android:textStyle="bold"
+        android:paddingTop="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/earning"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintTop_toBottomOf="@+id/product" />
 
     <Button
         android:id="@+id/earning"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#F5F7F8"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
         android:drawableTop="@drawable/img_4"
         android:text="EARNINGS"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/pos"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        android:paddingTop="10dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/flow"
+        app:layout_constraintEnd_toStartOf="@+id/receipt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category" />
 
     <Button
-        android:id="@+id/exit"
-        android:layout_width="100dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#F5F7F8"
-        android:drawableTop="@drawable/img_5"
-        android:text="EXIT"
+        android:id="@+id/receipt"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/home_btn_border"
+        android:drawableTop="@drawable/icons8_receipt"
+        android:text="RECEIPT"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="16sp"
         android:textStyle="bold"
+        android:paddingTop="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/earning"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewinventory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/product_border">
+
+    <!-- Labels for each item -->
+
+    <TextView
+        android:id="@+id/itemNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Product: "
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Category: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameLabel" />
+
+    <TextView
+        android:id="@+id/itemPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Price: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCategoryLabel" />
+
+    <TextView
+        android:id="@+id/itemQuantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Quantity: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPriceLabel" />
+
+    <TextView
+        android:id="@+id/itemBarcodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:text="Barcode: "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemQuantityLabel" />
+
+    <TextView
+        android:id="@+id/itemCapitalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Capital: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemBarcodeLabel" />
+
+        <TextView
+        android:id="@+id/itemTotalEarningsLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Total Earnings: "
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCapitalLabel" />
+
+    <TextView
+        android:id="@+id/itemPurchasedLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Item Purchased: "
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemTotalEarningsLBL" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/itemNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemNameLabel" />
+
+    <TextView
+        android:id="@+id/itemCategory"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/itemCategoryLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemCategoryLabel" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/itemPriceLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemPriceLabel" />
+
+    <TextView
+        android:id="@+id/itemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/itemQuantityLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemQuantityLabel" />
+
+    <TextView
+        android:id="@+id/itemBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/itemBarcodeLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemBarcodeLabel" />
+
+    <TextView
+        android:id="@+id/itemCapital"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/itemCapitalLabel"
+        app:layout_constraintTop_toTopOf="@+id/itemCapitalLabel" />
+
+    <TextView
+        android:id="@+id/totalEarning"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/itemTotalEarningsLBL"
+        app:layout_constraintTop_toTopOf="@+id/itemTotalEarningsLBL" />
+
+    <TextView
+        android:id="@+id/itemPurchased"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/itemPurchasedLBL"
+        app:layout_constraintTop_toTopOf="@+id/itemPurchasedLBL" />
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="#F5F7F8"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
